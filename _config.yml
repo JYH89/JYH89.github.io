@@ -84,3 +84,5 @@ friends: [
        href: "http://mifind.online/TictactoeGame/"
     }
 ]
+
+theme: jekyll-theme-cayman
