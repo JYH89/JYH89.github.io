@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "【leetcode】771. 宝石与石头"
-subtitle:   "他人的写法，我的写法"
+title:      "【leetcode】58. 最后一个单词的长度"
+subtitle:   "split()方法学习"
 date:        2019-8-9 17:20:00
 author:     "RayChou"
 header-img: "img/post_bg_python.jpeg"
@@ -9,83 +9,76 @@ tags:
    - 每日练习 python
 ---
 
-# 【leetcode】771. 宝石与石头
-今天做了leetcode的宝石与石头一题的心得
+# 【leetcode】58. 最后一个单词的长度
+今天做了leetcode的最后一个单词的长度一题的心得
       
 #### 题目
-给定字符串J 代表石头中宝石的类型，和字符串 S代表你拥有的石头。 S 中每个字符代表了一种你拥有的石头的类型，你想知道你拥有的石头中有多少是宝石。
+给定一个仅包含大小写字母和空格 ' ' 的字符串，返回其最后一个单词的长度。
 
-J 中的字母不重复，J 和 S中的所有字符都是字母。字母区分大小写，因此"a"和"A"是不同类型的石头。
+如果不存在最后一个单词，请返回 0 。
+
+说明：一个单词是指由字母组成，但不包含任何空格的字符串。
 
 ###示例 1:
 
-输入: J = "aA", S = "aAAbbbb"
-输出: 3
-示例 2:
-
-输入: J = "z", S = "ZZ"
-输出: 0
-注意:
-S 和 J 最多含有50个字母。J 中的字符不重复。
-
+输入: "Hello World"
+输出: 5
 来源：力扣（LeetCode）
-链接：https://leetcode-cn.com/problems/jewels-and-stones
+链接：<https://leetcode-cn.com/problems/jewels-and-stones>
 
 > 别人的解法一：
 ```
-class Solution(object):
-    def numJewelsInStones(self, J, S):
-        """
-        :type J: str
-        :type S: str
-        :rtype: int
-        """
-        for i in J:
-             S.count(i)
-        return sum(S.count(i) for i in J)
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        return len(s.rstrip().split(" ")[-1])
 ```
 > 别人的解法二：
 ```
-class Solution(object):
-    def numJewelsInStones(self, J, S):
-        """
-        :type J: str
-        :type S: str
-        :rtype: int
-        """
-        return len([i for i in S if i in J])
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        s_ = s.rstrip()
+        if s_ == '':
+            return 0
+        sub = s_.split(' ')
+        lenth = len(sub[-1])
+        return lenth
 ```
 
 #### 我的解法：
 ```
-from collections import Counter
-
-class Solution(object):
-    def numJewelsInStones(self, J, S):
-        """
-        :type J: str
-        :type S: str
-        :rtype: int
-        """
-        sum = 0
-        jewels = list(J)
-        stones = dict(Counter(S))
-        for i in range(len(jewels)):
-            if jewels[i] in stones:
-                sum = sum+stones[jewels[i]]
-        return sum
+class Solution:
+    def lengthOfLastWord(self, S):
+        return 0 if len(S.split())<1 else len(S.split()[-1])
 
 ```
-1、首先没有意识到可以直接遍历字符串，for in ,而我使用的是for in range(len())
-https://blog.csdn.net/cadi2011/article/details/85333068
-2、关于求和，没有意识到可以使用sum(),而我使用的是sum+=
-3、查找一个字符串中某个字符出现的次数可以用S.count，而我使用的是转换成字典
+1、首先没有意识到split()分隔字符串函数的正确使用s_.split(' '),而我使用的是S.split()
+通过查看str类下的方法如下：
+```
+ |  split(...)
+ |      S.split(sep=None, maxsplit=-1) -> list of strings
+ |      
+ |      Return a list of the words in S, using sep as the
+ |      delimiter string.  If maxsplit is given, at most maxsplit
+ |      splits are done. If sep is not specified or is None, any
+ |      whitespace string is a separator and empty strings are
+ |      removed from the result.
+``` 
+2、通过测试如下，来理解上述文档含义
+```>>> s=" "
+>>> s.split()
+[]
+>>> s.split(" ")
+['', '']
+>>> 
+```
 
 
-以上的两种解题思路：
-1）依次遍历J中的宝石类型，找到每种宝石出现的次数，并且求和
-2）依次遍历S中的所有石头类型，如果找到了，则将该石头放入宝石列表，最后返回宝石列表的长度
-所以说第一种优于第二种
+**重新梳理解题思路：**
 
-我的问题。不要过分的依赖第三方包，尽量写得pythonic
-并且在写得时候记不住最基础的字符串和字典的方法，仍然去翻阅了API接口文档
+1）字符串可能的组成形式有：空串'',包含一个空格的串' ',只有一个单词的字符串'hello',包含若干空格的单词'hello my baby',整个字符串的开头结尾包含空格的' hello baba '
+2）获取最后一个单词，首先想到的就是split，使用空格分隔
+3）对1中的情况分类：
+   考虑字符串首尾可能有空格，但是我们只关心最后一个单词，所以可以在分隔字符串前，使用rstrip()方法去掉字段串尾部的空格
+   对于获取最后一个单词可以使用切片-1获取
+
+***tip: 要学会使用help去查看方法的具体使用方法***
