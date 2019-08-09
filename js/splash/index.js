@@ -106,7 +106,7 @@
                 circles[j].tween = TweenLite.to(circles[j], 0.4, {alpha: 0.1});
             }
         }
-      
+
     }
 
     function explode() {
@@ -131,9 +131,9 @@
         setTimeout(function() {
             explode();
             textFormed = false;
-            createText(' MiFind ');
+            createText(' RayChou ');
        }, 2000);
-    
+
         setTimeout(function() {
             explode();
             textFormed = false;
@@ -152,7 +152,7 @@
         setTimeout(function() {
             window.location.href = "../../index.html"
        }, 6000);
-       
+
 
         // form.addEventListener('submit', function(e) {
         //     e.preventDefault();
