@@ -6,7 +6,7 @@ date:       2016-04-06 10:00:00
 author:     ""
 header-img: "img/post-bg-2015.jpg"
 tags:
-   - android
+   - python
 ---
 
 

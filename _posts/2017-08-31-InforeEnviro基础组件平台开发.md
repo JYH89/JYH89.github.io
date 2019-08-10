@@ -6,7 +6,7 @@ date:        2017-08-31 17:20:00
 author:     "mifind"
 header-img: "img/rn_bg.jpg"
 tags:
-   - ReactNative React 移动端 基础组建平台开发
+   - sql
 ---
 
 

@@ -6,7 +6,7 @@ date:        2018-10-18 17:20:00
 author:     "RayChou"
 header-img: "img/bg-sql.jpg"
 tags:
-   - oracle 
+   - sql 
 ---
 # oracle自定义函数function编写和调试
 关于function的书写格式如下：

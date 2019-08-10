@@ -6,7 +6,7 @@ date:        2019-8-9 17:20:00
 author:     "RayChou"
 header-img: "img/post_bg_python.jpeg"
 tags:
-   - 每日练习 python
+   - python
 ---
 
 # 【leetcode】771. 宝石与石头

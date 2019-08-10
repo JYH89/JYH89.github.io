@@ -6,7 +6,7 @@ date:        2017-10-09 17:20:00
 author:     "mifind"
 header-img: "img/wei-xcx.jpeg"
 tags:
-   - Wepy 小程序 web 移动端 基础组建平台开发
+   - sql
 ---
 
 # 盈峰微信小程序框架

@@ -6,7 +6,7 @@ date:        2017-05-11 17:42:00
 author:     ""
 header-img: "img/rn_bg.jpg"
 tags:
-   - rn weex 小程序 android ios 跨平台
+   - Jmeter
 ---
 
 # ReactNative项目搭建
