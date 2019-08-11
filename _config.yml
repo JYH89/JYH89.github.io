@@ -62,11 +62,11 @@ friends: [
         title: "音乐",
         href: "https://music.163.com/#/user/home?id=318807382"
     },{
-        title: "简历项目",
-        href: "#"
+        title: "FCC主页",
+        href: "https://www.freecodecamp.cn/jyh89"
     },{
-       title: "此刻，我要如何的喜欢生活。",
-       href: "#"
+       title: "leetcode主页",
+       href: "https://leetcode-cn.com/u/jyh89"
     },{
       title: "查看更多请关注我的微信公共号。",
       href: "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzAwOTQ2ODc3OQ==&scene=124#wechat_redirect"
