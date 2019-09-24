@@ -14,7 +14,7 @@ baseurl: ""                             # for example, '/blog' if your blog host
 # SNS settings
 RSS: false
 wechat_username:     ZL13163331097
-zhihu_username:     jia-wei-27
+zhihu_username:     you-dian-ji-xing-zi
 github_username:    JYH89
 
 
