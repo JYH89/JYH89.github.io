@@ -14,7 +14,7 @@ baseurl: ""                             # for example, '/blog' if your blog host
 # SNS settings
 RSS: false
 wechat_username:     ZL13163331097
-zhihu_username:     jia-wei-27
+zhihu_username:     you-dian-ji-xing-zi
 github_username:    JYH89
 
 
@@ -59,29 +59,17 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 # Friends
 friends: [
     {
-        title: "故事会",
-        href: "http://mifind.online/VUEONE/one/one/one.html#/"
-    },{
         title: "音乐",
-        href: "http://mifind.online/VUEONE/one/music/music.html#/"
+        href: "https://music.163.com/#/user/home?id=318807382"
     },{
-        title: "简历项目",
-        href: "http://mifind.online/myResume/"
+        title: "FCC主页",
+        href: "https://www.freecodecamp.cn/jyh89"
     },{
-       title: "此刻，我要如何的喜欢生活。",
-       href: "https://mp.weixin.qq.com/s/Pw46y8guGoEdb9v8SiHA0g"
+       title: "leetcode主页",
+       href: "https://leetcode-cn.com/u/jyh89"
     },{
-      title: "查看更多装逼文章请关注我微信公共号。",
-      href: "https://mp.weixin.qq.com/mp/qrcode?scene=10000004&size=102&__biz=MzA5MjM1MTE4OA==&mid=2449974894&idx=1&sn=295b26a29c893c9a3730a1b73f146767&send_time="
-    },{
-      title: "CodePen",
-          href: "https://codepen.io/mifind/"
-    },{
-       title: "番茄时钟",
-       href: "http://mifind.online/PomodoroClock/"
-    },{
-       title: "TicTacToe Game",
-       href: "http://mifind.online/TictactoeGame/"
+      title: "查看更多请关注我的微信公共号。",
+      href: "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzAwOTQ2ODc3OQ==&scene=124#wechat_redirect"
     }
 ]
 

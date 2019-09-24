@@ -6,7 +6,7 @@ date:        2019-8-9 17:20:00
 author:     "RayChou"
 header-img: "img/post_bg_python.jpeg"
 tags:
-   - 每日练习 python
+   - python
 ---
 
 # 【leetcode】58. 最后一个单词的长度
@@ -26,13 +26,16 @@ tags:
 来源：力扣（LeetCode）
 链接：<https://leetcode-cn.com/problems/jewels-and-stones>
 
-> 别人的解法一：
+####别人的解法一：
+-
 ```
 class Solution:
     def lengthOfLastWord(self, s: str) -> int:
         return len(s.rstrip().split(" ")[-1])
 ```
-> 别人的解法二：
+-
+####别人的解法二：
+-
 ```
 class Solution:
     def lengthOfLastWord(self, s: str) -> int:
@@ -43,16 +46,19 @@ class Solution:
         lenth = len(sub[-1])
         return lenth
 ```
-
+-
 #### 我的解法：
+-
 ```
 class Solution:
     def lengthOfLastWord(self, S):
         return 0 if len(S.split())<1 else len(S.split()[-1])
 
 ```
+-
 1、首先没有意识到split()分隔字符串函数的正确使用s_.split(' '),而我使用的是S.split()
 通过查看str类下的方法如下：
+-
 ```
  |  split(...)
  |      S.split(sep=None, maxsplit=-1) -> list of strings
@@ -63,15 +69,18 @@ class Solution:
  |      whitespace string is a separator and empty strings are
  |      removed from the result.
 ``` 
+-
 2、通过测试如下，来理解上述文档含义
-```>>> s=" "
+-
+```
+>>> s=" "
 >>> s.split()
 []
 >>> s.split(" ")
 ['', '']
 >>> 
 ```
-
+-
 
 **重新梳理解题思路：**
 
